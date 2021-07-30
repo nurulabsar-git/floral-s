@@ -7,6 +7,7 @@ import {
   Link
 } from "react-router-dom";
 import Header from './Components/Home/Header/Header';
+import Navbar from './Components/Home/Header/Navbar/Navbar';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
      <Router>
        <Switch>
          <Route>
-           <Header/>
+          <Navbar></Navbar>
          </Route>
        </Switch>
      </Router>
