@@ -8,14 +8,16 @@ import {
 } from "react-router-dom";
 import Header from './Components/Home/Header/Header';
 import Navbar from './Components/Home/Header/Navbar/Navbar';
+import HomePage from './Components/Home/HomePage/HomePage';
 
 function App() {
   return (
     <div>
      <Router>
+     <Header/>
        <Switch>
-         <Route>
-          <Navbar></Navbar>
+         <Route exact path="/">
+          <HomePage></HomePage>
          </Route>
        </Switch>
      </Router>
