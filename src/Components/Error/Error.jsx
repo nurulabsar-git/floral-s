@@ -1,9 +1,9 @@
 import React from 'react';
-
+import err from '../image/sadface.gif'
 const Error = () => {
     return (
         <div style={{textAlign: 'center', margin: '30px'}}>
-           <h1>This is an error, you can try another way</h1> 
+           <img src={err} alt="404" style={{textAlign: 'center', width: '60%'}} />
         </div>
     );
 };
