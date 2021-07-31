@@ -2,6 +2,8 @@
 
 # dependencies
 /node_modules
+/firebase.json
+/.firebase
 /.pnp
 .pnp.js
 
