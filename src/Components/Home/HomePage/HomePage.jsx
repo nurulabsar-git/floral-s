@@ -6,7 +6,7 @@ const HomePage = () => {
         <div className="home-container text-center" >
             <div className="p-56 text-center">
             <input type="text" style={{width: '280px', height: '35px'}} />
-            </div>
+            </div> 
         </div>
     );
 };
