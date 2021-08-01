@@ -8,8 +8,9 @@ import {
 import Header from './Components/Home/Header/Header';
 import HomePage from './Components/Home/HomePage/HomePage';
 import Meals from './Components/Home/HomePage/Meals/Meals';
-import ProductFeatures from './Components/Home/Footer/ProductFeatures';
-import ProductFeaturesDetails from './Components/Home/Footer/ProductFeaturesDetails';
+import ProductFeatures from './Components/Home/Food/ProductFeatures';
+import ProductFeaturesDetails from './Components/Home/Food/ProductFeaturesDetails';
+import Footer from './Components/Home/Footer/Footer';
 
 function App() {
   return (
@@ -21,10 +22,12 @@ function App() {
           <HomePage/>
           <Meals/>
           <ProductFeatures/>
+          <Footer/>
          </Route>
           <Route path="/fruits/:productFeatureId">
               <ProductFeaturesDetails/>
          </Route>
+
        </Switch>
      </Router>
     </div>
