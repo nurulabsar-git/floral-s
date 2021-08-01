@@ -44,7 +44,7 @@ const ProductFeatures = () => {
             foodData.map(datum => 
                 <section onClick={() => handleFood(datum._id)} className="m-2 p-5 place-self-center shadow-lg">
                     <div className="">
-                        <img src={datum.image} alt="" className="w-40 h-28" />
+                        <img src={datum.image} alt={datum.identity} className="w-40 h-28" />
                     </div>
                     <h4> {datum.identity}</h4>
                 </section>
