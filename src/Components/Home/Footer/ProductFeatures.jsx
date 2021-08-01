@@ -37,14 +37,14 @@ const ProductFeatures = () => {
 
 
     return (
-        <div className="m-10">
-            <h3 className="text-center">Food Features</h3>
+        <div className="m-2 md:m-5">
+            <h1 className="text-center">Food Features</h1>
           <div className="grid grid-cols-2 md:grid-cols-4">
           {
             foodData.map(datum => 
-                <section onClick={() => handleFood(datum._id)} className="mt-5 place-self-center">
-                    <div>
-                        <img src={datum.image} alt="" className="w-40 h-20" />
+                <section onClick={() => handleFood(datum._id)} className="m-2 p-5 place-self-center shadow-lg">
+                    <div className="">
+                        <img src={datum.image} alt="" className="w-40 h-28" />
                     </div>
                     <h4> {datum.identity}</h4>
                 </section>
