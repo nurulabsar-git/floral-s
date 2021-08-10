@@ -4,7 +4,7 @@ const Vegetables = () => {
  const [vegetableData, setVegetableData] = useState([]);
 
 useEffect(() => {
-      fetch("http://localhost:5000/services")
+      fetch("https://shrouded-escarpment-21521.herokuapp.com/services")
       .then(result => result.json())
       .then(data =>{
         setVegetableData(data)
