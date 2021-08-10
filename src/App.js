@@ -7,10 +7,10 @@ import {
 } from "react-router-dom";
 import Header from './Components/Home/Header/Header';
 import HomePage from './Components/Home/HomePage/HomePage';
-import Meals from './Components/Home/HomePage/Meals/Meals';
 import ProductFeatures from './Components/Home/Food/ProductFeatures';
 import ProductFeaturesDetails from './Components/Home/Food/ProductFeaturesDetails';
 import Footer from './Components/Home/Footer/Footer';
+import UploadFile from './Components/UploadFiles/UploadFile';
 
 function App() {
   return (
@@ -20,14 +20,15 @@ function App() {
        <Switch>
          <Route exact path="/">
           <HomePage/>
-          <Meals/>
           <ProductFeatures/>
           <Footer/>
          </Route>
           <Route path="/fruits/:productFeatureId">
               <ProductFeaturesDetails/>
          </Route>
-
+         <Route path="/file">
+            <UploadFile/>
+         </Route>
        </Switch>
      </Router>
     </div>

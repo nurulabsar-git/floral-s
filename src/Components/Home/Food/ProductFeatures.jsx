@@ -38,11 +38,11 @@ const ProductFeatures = () => {
 
     return (
         <div className="m-2 md:m-5">
-            <h1 className="text-center">Food Features</h1>
+            <h1 className="text-center" data-testid="product">Food Features</h1>
           <div className="grid grid-cols-2 md:grid-cols-4">
           {
             foodData.map(datum => 
-                <section onClick={() => handleFood(datum._id)} className="m-2 p-5 place-self-center shadow-lg">
+                <section onClick={() => handleFood(datum._id)} key={datum._id} className="m-2 p-5 place-self-center shadow-lg">
                     <div className="">
                         <img src={datum.image} alt={datum.identity} className="w-40 h-28" />
                     </div>
