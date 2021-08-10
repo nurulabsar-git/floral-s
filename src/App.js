@@ -12,6 +12,7 @@ import ProductFeaturesDetails from './Components/Home/Food/ProductFeaturesDetail
 import Footer from './Components/Home/Footer/Footer';
 import UploadFile from './Components/UploadFiles/UploadFile';
 import AddServices from './Components/Services/AddServices/AddServices';
+import Vegetables from './Components/Home/Food/Vegetables/Vegetables';
 
 function App() {
   return (
@@ -32,6 +33,9 @@ function App() {
          </Route>
          <Route path="/addService">
             <AddServices/>
+         </Route>
+         <Route path="/vegetable">
+           <Vegetables/>
          </Route>
        </Switch>
      </Router>
