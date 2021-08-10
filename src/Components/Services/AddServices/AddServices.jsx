@@ -8,7 +8,7 @@ const AddServices = () => {
             <div>
                 <input 
                 type="text" name="name"
-                className="w-96 h-10 mt-2 p-4 border-purple-100" 
+                className="w-96 h-10 mt-2 p-4 border-double" 
                 placeholder="Name" 
                 required/>
             </div>
@@ -33,7 +33,12 @@ const AddServices = () => {
                  className="w-96 h-10 mt-2 p-2"
                  placeholder="Upload File" />
             </div>
-             <input type="submit" value="Submit" class="transition rounded duration-500 ease-in-out bg-blue-600 hover:border-double hover:bg-green-600 transform hover:-translate-y-1 hover:scale-110 w-96 h-10"/>
+             <input type="submit" value="Submit"
+              class="mt-5 transition rounded duration-500
+             ease-in-out bg-blue-600
+             hover:border-double
+             hover:bg-green-600 transform hover:-translate-y-1
+             hover:scale-110 w-96 h-10"/>
             </form>
         </div>
     );
