@@ -46,8 +46,10 @@ const UploadFile = () => {
   <div className="text-center p-5 bg-green-100">
       <h2 className='text-center'>Add Vegetables</h2>
      <form onSubmit={handleSubmit(onSubmit)} className="p-10 shadow-md">
-        <textarea rows="3" className=" w-96 border rounded border-double border-4 rounded-md p-2" type="text" name="title" {...register("title", {required: true})} placeholder="Title*"/> <br/>
-        <textarea rows="8" className="w-96 border rounded border-double border-4 border-light-blue-500 p-2" type="text" name="content" {...register("content", {required: true})} placeholder="Content*"/><br/>
+        <textarea rows="3" type="text" name="title" {...register("title", {required: true})} className=" w-96 border rounded border-double border-4 rounded-md p-2" placeholder="Title*"/> <br/>
+        <input  type="number" name="price" {...register("price", {required: true})} className=" w-96 border rounded border-double border-4 rounded-md mb-2 p-2" placeholder="Price*"/> <br/>
+        <input type="text" name="weight" {...register("weight", {required: true})} className=" w-96 border rounded border-double border-4 rounded-md mb-2 p-2" placeholder="Weight*"/> <br/>
+        <textarea rows="8" type="text" name="content" {...register("content", {required: true})} className="w-96 border rounded border-double border-4 border-light-blue-500 p-2" placeholder="Content*"/><br/>
         <input type="file" onChange={handleDataUpload} className="w-96 text-gray-700 px-3 py-2 border rounded"/> <br />
         <input type="submit" className="mt-5 transition rounded duration-500
              ease-in-out bg-blue-600
