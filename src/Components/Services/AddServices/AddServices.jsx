@@ -46,7 +46,7 @@ const AddServices = () => {
 
     return (
         <div className="text-center m-5">
-            <form onSubmit={handleSubmit} className="bg-red-100 p-10 ">
+            <form onSubmit={handleSubmit} className="bg-red-100 p-10 shadow-md">
             <div>
                 <input 
                 type="text" name="name" onBlur={handleBlur}
@@ -66,13 +66,13 @@ const AddServices = () => {
                  placeholder="Weight" />
             </div>
             <div>
-                <input type="text" name="details" onBlur={handleBlur}
-                 className="w-96 h-10 mt-2 p-4"
+                <textarea rows="8" type="text" name="details" onBlur={handleBlur}
+                 className="w-96 mt-2 p-4"
                   placeholder="Details" required/>
             </div>
             <div>
                 <input type="file" onChange={handleFile} name=""
-                 className="w-96 h-10 mt-2 p-2"
+                 className="w-96 text-green-100 px-3 py-2 border rounded"
                  placeholder="Upload File" />
             </div>
              <input type="submit" value="Submit"

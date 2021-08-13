@@ -18,29 +18,31 @@ const Contact = () => {
             <div>
             <ul class="flex border-b pt-5 shadow-md">
                 <li class="mr-1">
-                 <Link  class="bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold" to="/serviceOne">Service One</Link>
+                 <a  class="bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold" href="#serviceOne">Service One</a>
                 </li>
                 <li class="mr-1">
-                 <Link class="bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold" href="#serviceTwo">Recipies</Link>
+                 <a class="bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold" href="#serviceTwo">Service Two</a>
                 </li>
                 <li class="mr-1">
-                 <Link class="bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold" href="#">Recipies</Link>
+                 <a class="bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold" href="#">Service Three</a>
                 </li>
                 <li class="mr-1">
-                 <Link class="bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold" href="#">Recipies</Link>
+                 <Link class="bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold" href="#">Service Four</Link>
                 </li>
             </ul>
          </div>
-         <div>
-         <AddServices/>
+          <section>
+          <div id="serviceOne">
+            <AddServices/>
          </div>
          <div id="serviceTwo">
-         <UploadFile/>
+            <UploadFile/>
          </div>
-         <div id="serviceOne">
-         <AddServices/>
+         <div>
+           <AddServices/>
          </div>
-      </section>
+          </section>
+       </section>
         </main>
     );
 };
