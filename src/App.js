@@ -13,6 +13,7 @@ import Footer from './Components/Home/Footer/Footer';
 import UploadFile from './Components/UploadFiles/UploadFile';
 import AddServices from './Components/Services/AddServices/AddServices';
 import Vegetables from './Components/Home/Food/Vegetables/Vegetables';
+import Contact from './Components/Contact/Contact';
 
 function App() {
   return (
@@ -36,6 +37,9 @@ function App() {
          </Route>
          <Route path="/vegetable">
            <Vegetables/>
+         </Route>
+         <Route path="/contact">
+            <Contact/>
          </Route>
        </Switch>
      </Router>

@@ -23,7 +23,7 @@ const Navbar = () => {
         <Link class="bg-white inline-block py-2 px-4 text-gray-400 font-semibold" href="#">Podcast</Link>
       </li>
       <li class="mr-1">
-        <Link class="bg-white inline-block py-2 px-4 text-gray-400 font-semibold" href="#">Contact</Link>
+        <Link to="/contact" class="bg-white inline-block py-2 px-4 text-gray-400 font-semibold" href="/contact">Contact</Link>
       </li>
       <li class="mr-1">
         <Link class="bg-white inline-block py-2 px-4 text-gray-400 font-semibold" href="#">Basics</Link>
@@ -31,7 +31,6 @@ const Navbar = () => {
       <li class="mr-1">
         <Link class="bg-white inline-block py-2 px-4 text-gray-400 font-semibold" href="#">Health</Link>
       </li>
-      
     </ul>
      </div>
     );
