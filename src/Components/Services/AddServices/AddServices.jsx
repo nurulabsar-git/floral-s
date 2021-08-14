@@ -9,7 +9,7 @@ const AddServices = () => {
      const newService = {...addServices}
      newService[event.target.name] = event.target.value;
      setAddServices(newService);
-    
+
  }
 
  const handleFile = (e) => {
@@ -27,7 +27,7 @@ const AddServices = () => {
      formData.append('weight', addServices.weight)
      formData.append('price', addServices.price)
    
-    fetch("http://localhost:5000/addItem", {
+    fetch("https://shrouded-escarpment-21521.herokuapp.com/addItem", {
         method: "POST",
         body: formData,
     })
@@ -37,6 +37,7 @@ const AddServices = () => {
         alert("Successfully done!");
         console.log(data)
         event.target.reset();
+
        }
    })
 
@@ -71,8 +72,8 @@ const AddServices = () => {
                   placeholder="Details" required/>
             </div>
             <div>
-                <input type="file" onChange={handleFile} name=""
-                 className="w-96 text-green-100 px-3 py-2 border rounded"
+                <input type="file" onChange={handleFile} 
+                 className="w-96 px-3 py-2 border rounded"
                  placeholder="Upload File" />
             </div>
              <input type="submit" value="Submit"

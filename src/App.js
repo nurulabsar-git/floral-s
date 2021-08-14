@@ -14,6 +14,7 @@ import UploadFile from './Components/UploadFiles/UploadFile';
 import AddServices from './Components/Services/AddServices/AddServices';
 import Vegetables from './Components/Home/Food/Vegetables/Vegetables';
 import Contact from './Components/Contact/Contact';
+import FreshFruits from './Components/Home/Food/FreshFruits/FreshFruits';
 
 function App() {
   return (
@@ -32,11 +33,14 @@ function App() {
          <Route path="/file">
             <UploadFile/>
          </Route>
-         <Route path="/addService">
+         {/* <Route path="/addService">
             <AddServices/>
-         </Route>
+         </Route> */}
          <Route path="/vegetable">
            <Vegetables/>
+         </Route>
+         <Route path="/fruit">
+          <FreshFruits/>
          </Route>
          <Route path="/contact">
             <Contact/>

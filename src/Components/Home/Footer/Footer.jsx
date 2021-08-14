@@ -31,13 +31,13 @@ const shoppingGideData = [
 
 ]
 const Footer = () => {
-    console.log(shoppingGideData);
-    console.log(shoppingGideData[0].buy);
-    console.log(shoppingGideData[1].heading);
-    console.log(shoppingGideData[2].heading);
+    // console.log(shoppingGideData);
+    // console.log(shoppingGideData[0].buy);
+    // console.log(shoppingGideData[1].heading);
+    // console.log(shoppingGideData[2].heading);
     return (
         <div className="p-10 bg-gray-400">
-            <h4 data-testid="detail">Footer</h4>
+            {/* <h4 data-testid="detail">Footer</h4> */}
             {
                 // shoppingGideData.map(datum => // )
                     <section className="grid grid-cols-2 md:grid-cols-3">

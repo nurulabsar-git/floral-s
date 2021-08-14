@@ -15,7 +15,7 @@ const Contact = () => {
             </address>
             </div>
             <section>
-            <div>
+            {/* <div>
             <ul class="flex border-b pt-5 shadow-md">
                 <li class="mr-1">
                  <a  class="bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold" href="#serviceOne">Service One</a>
@@ -30,16 +30,13 @@ const Contact = () => {
                  <Link class="bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold" href="#">Service Four</Link>
                 </li>
             </ul>
-         </div>
+         </div> */}
           <section>
-          <div id="serviceOne">
+          <div>
             <AddServices/>
          </div>
-         <div id="serviceTwo">
-            <UploadFile/>
-         </div>
          <div>
-           <AddServices/>
+            <UploadFile/>
          </div>
           </section>
        </section>

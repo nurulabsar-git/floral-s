@@ -14,7 +14,7 @@ useEffect(() => {
 }, [])
     return (
         <div>
-            <h4>Vegetables</h4>
+          vegetable
           <div>
           {
             vegetableData.map(datum => 
