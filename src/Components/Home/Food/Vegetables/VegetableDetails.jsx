@@ -4,17 +4,22 @@ import { useParams } from 'react-router-dom';
 const VegetableDetails = () => {
 const {vegetableId} = useParams();
 console.log(vegetableId);
-const[vegetableDetails, setVegetableDetails] = useState([])
-
+const[vegetableDetails, setVegetableDetails] = useState({})
+console.log(vegetableDetails);
 useEffect(() => {
-    fetch(`http://localhost:5000/services/${vegetableId}`)
+    fetch(`https://shrouded-escarpment-21521.herokuapp.com/services/${vegetableId}`)
     .then(result => result.json())
     .then(data => setVegetableDetails(data))
 }, [vegetableId])
 
     return (
         <div>
-           <h1> this is vegetable details {vegetableId}</h1>
+           <h1> This is vegetable details {vegetableId}</h1>
+
+             <div>
+                 {vegetableDetails?.name} <br />
+                <img src={`data:image/png;base64,${vegetableDetails?.image?.img}`} alt=""  style={{maxWidth: '150px'}}/>
+             </div>
         </div>
     );
 };
