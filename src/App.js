@@ -15,6 +15,7 @@ import AddServices from './Components/Services/AddServices/AddServices';
 import Vegetables from './Components/Home/Food/Vegetables/Vegetables';
 import Contact from './Components/Contact/Contact';
 import FreshFruits from './Components/Home/Food/FreshFruits/FreshFruits';
+import VegetableDetails from './Components/Home/Food/Vegetables/VegetableDetails';
 
 function App() {
   return (
@@ -44,6 +45,9 @@ function App() {
          </Route>
          <Route path="/contact">
             <Contact/>
+         </Route>
+         <Route path="/vegetableDetails/:vegetableId">
+           <VegetableDetails/>
          </Route>
        </Switch>
      </Router>

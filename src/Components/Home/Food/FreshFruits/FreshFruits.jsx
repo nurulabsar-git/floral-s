@@ -10,6 +10,9 @@ const FreshFruits = () => {
   .then(result => result.json())
   .then(data => setGetFreshFruits(data))
   }, [])
+
+
+ 
     return (
         <div>
             <div>
