@@ -11,16 +11,22 @@ useEffect(() => {
     .then(result => result.json())
     .then(data => setVegetableDetails(data))
 }, [vegetableId])
+ const style = {
+     display: 'grid',
 
+ }
     return (
-        <div>
+        <main className="d-grid text-center">
            <h1> This is vegetable details {vegetableId}</h1>
-
              <div>
-                 {vegetableDetails?.name} <br />
-                <img src={`data:image/png;base64,${vegetableDetails?.image?.img}`} alt=""  style={{maxWidth: '150px'}}/>
+             <img src={`data:image/png;base64,${vegetableDetails?.image?.img}`} alt=""  style={{maxWidth: '150px'}}/>
              </div>
-        </div>
+             {vegetableDetails?.name} <br />
+             <div >
+                
+               
+             </div>
+        </main>
     );
 };
 

@@ -25,13 +25,12 @@ const handleVegetableCartClick = (id) => {
           {
             vegetableData.map(datum => 
               <div onClick={() => {handleVegetableCartClick(datum?._id)}} key={datum?._id} className="text-center" >
-               <div>
-               <h2>{datum?.name}</h2>
-                <div>
-                  <img src={`data:image/png;base64,${datum.image.img}`} alt="" className="w-28" />
+             
+               <div className='' style={{display: 'grid', boxShadow: '2px 2px 4px gray', margin: '5px', width: '150px', gridTemplateColumns: ''}}>
+                  <img src={`data:image/png;base64,${datum.image.img}`} alt="" className="w-48" />
+                  <h2>{datum?.name}</h2>
                 </div>
               </div>
-               </div>
               
               )
             }
