@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
-
+import {CardElement, useStripe, useElements} from '@stripe/react-stripe-js';
 const SubPaymentGateway = () => {
 
     const [paymentSuccess, setPaymentSuccess] = useState(null);
     const [paymentError, setPaymentError] = useState(null);
 
     const handleSubmit = async (event) => {
-        
-        event.preventDefault();
+         event.preventDefault();
     
         if (!stripe || !elements) {
          
