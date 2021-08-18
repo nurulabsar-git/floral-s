@@ -6,22 +6,27 @@ import Vegetables from './Vegetables/Vegetables';
 const ProductFeaturesDetails = () => {
     const {productFeatureId} = useParams()
   
-    const menuItems = [
-        {component: <Vegetables/>, title: "Vegetables", _id: 0},
-        {component: <FreshFruits/>, title: "Fruits", _id: 1}
-    ]
-
-    const [mulComponent, setMulComponents] = useState([])
+    /*/ const menuItems = [
+    //     {component: <Vegetables/>, title: "Vegetables", _id: 0},
+    //     {component: <FreshFruits/>, title: "Fruits", _id: 1}
+    // ]
+ // menuItems.map((item, i) => 
+                        // <li key={i} onClick={() => setMulComponents(item.component)}>
+                        //     {item.title}
+                        // </li>
+                        // )
+                        const [mulComponent, setMulComponents] = useState([])
+    /*/ 
 
    const first = () => {
        if(productFeatureId == '1'){
-           return(
+           return (
               <Vegetables/>
            )
 
        }
-    else if(productFeatureId == '2'){
-        return(
+    else if (productFeatureId == '2'){
+        return (
             <FreshFruits/>
         )
     }
@@ -29,23 +34,12 @@ const ProductFeaturesDetails = () => {
 
     return (
         <div>
-            <h1>This is {productFeatureId}</h1>
-            <div>
-                <ul>
-
-                
-
-                    {
-
-                        first()
-                        // menuItems.map((item, i) => 
-                        // <li key={i} onClick={() => setMulComponents(item.component)}>
-                        //     {item.title}
-                        // </li>
-                        // )
-                    }
-                </ul>
-            </div>
+             <div>
+             {
+                 first()
+                       
+             }
+              </div>   
         </div>
     );
 };

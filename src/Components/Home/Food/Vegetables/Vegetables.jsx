@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {  useHistory } from 'react-router-dom';
+import SubVegetable from './SubVegetable';
 
 const Vegetables = () => {
  const [vegetableData, setVegetableData] = useState([]);
@@ -8,31 +8,26 @@ useEffect(() => {
       .then(result => result.json())
       .then(data =>{
         setVegetableData(data)
-        // console.log(data)
+        console.log(data)
       }
       )
 }, [])
 
-const history = useHistory();
-const handleVegetableCartClick = (id) => {
-   history.push(`/vegetableDetails/${id}`)
-}
+
 
     return (
         <div>
-          vegetable
+          hello vegetable lading
           <div>
           {
-            vegetableData.map(datum => 
-              <div onClick={() => {handleVegetableCartClick(datum?._id)}} key={datum?._id} className="text-center" >
-             
-               <div className='' style={{display: 'grid', boxShadow: '2px 2px 4px gray', margin: '5px', width: '150px', gridTemplateColumns: ''}}>
-                  <img src={`data:image/png;base64,${datum.image.img}`} alt="" className="w-48" />
-                  <h2>{datum?.name}</h2>
-                </div>
+              vegetableData?.length === 0 && <div className=" flex justify-center items-center">
+              <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-purple-500">
+                
               </div>
-              
-              )
+            </div>
+          }
+          {
+            vegetableData?.map(datum => <SubVegetable key={datum?._id} datum={datum}/> )
             }
           </div>
         </div>
