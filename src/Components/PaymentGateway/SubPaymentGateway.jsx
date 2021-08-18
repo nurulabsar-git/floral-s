@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import {CardElement, useStripe, useElements} from '@stripe/react-stripe-js';
 const SubPaymentGateway = () => {
-
+    const stripe = useStripe();
+    const elements = useElements();
+    
     const [paymentSuccess, setPaymentSuccess] = useState(null);
     const [paymentError, setPaymentError] = useState(null);
 

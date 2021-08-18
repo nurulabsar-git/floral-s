@@ -24,13 +24,14 @@ useEffect(() => {
     .then(result => result.json())
     .then(data => setVegetableDetails(data))
 }, [vegetableId])
+
  const style = {
      display: 'grid',
 
  }
     return (
         <main className="d-grid text-center">
-           <h1> This is vegetable details {vegetableId}</h1>
+           {/* <h1> This is vegetable details {vegetableId}</h1> */}
              <div>
              <img src={`data:image/png;base64,${vegetableDetails?.image?.img}`} alt=""  style={{maxWidth: '150px'}}/>
              </div>
@@ -38,8 +39,12 @@ useEffect(() => {
              <div >
             
              </div>
-
-            <BuyProducts  modalIsOpen={modalIsOpen} closeModal={closeModal} productInfo={vegetableDetails}/>
+             <div>
+                 <button onClick={openModal} type="submit">
+                   Buy Now
+                 </button>
+                 <BuyProducts  modalIsOpen={modalIsOpen} closeModal={closeModal} productDetails={vegetableDetails}/>
+             </div>
         </main>
     );
 };
