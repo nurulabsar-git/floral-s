@@ -1,11 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import BuyProducts from '../../../BuyProducts/BuyProducts';
 
 const VegetableDetails = () => {
 const {vegetableId} = useParams();
 console.log(vegetableId);
 const[vegetableDetails, setVegetableDetails] = useState({})
 console.log(vegetableDetails);
+
+//Modal
+const [modalIsOpen,setIsOpen] = useState(false);
+    const openModal = () => {
+        setIsOpen(true);
+      }
+      function closeModal(){
+        setIsOpen(false);
+      }
+
+//Load Data
+
 useEffect(() => {
     fetch(`https://shrouded-escarpment-21521.herokuapp.com/services/${vegetableId}`)
     .then(result => result.json())
@@ -23,9 +36,10 @@ useEffect(() => {
              </div>
              {vegetableDetails?.name} <br />
              <div >
-                
-               
+            
              </div>
+
+            <BuyProducts  modalIsOpen={modalIsOpen} closeModal={closeModal} productInfo={vegetableDetails}/>
         </main>
     );
 };
