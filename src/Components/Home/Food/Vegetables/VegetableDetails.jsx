@@ -32,6 +32,14 @@ useEffect(() => {
     return (
         <main className="d-grid text-center">
            {/* <h1> This is vegetable details {vegetableId}</h1> */}
+           {
+              vegetableDetails?.length === 0 && <div className=" flex justify-center items-center">
+              <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-purple-500">
+              </div>
+            </div>
+          }
+
+             <section>
              <div>
              <img src={`data:image/png;base64,${vegetableDetails?.image?.img}`} alt=""  style={{maxWidth: '150px'}}/>
              </div>
@@ -45,6 +53,7 @@ useEffect(() => {
                  </button>
                  <BuyProducts  modalIsOpen={modalIsOpen} closeModal={closeModal} productDetails={vegetableDetails}/>
              </div>
+             </section>
         </main>
     );
 };

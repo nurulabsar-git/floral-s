@@ -27,7 +27,7 @@ const AddServices = () => {
      formData.append('weight', addServices.weight)
      formData.append('price', addServices.price)
    
-    fetch("https://shrouded-escarpment-21521.herokuapp.com/addItem", {
+    fetch("http://localhost:5000/addItem", {
         method: "POST",
         body: formData,
     })
@@ -47,6 +47,7 @@ const AddServices = () => {
 
     return (
         <div className="text-center m-5">
+            <h1> File Upload System</h1>
             <form onSubmit={handleSubmit} className="bg-red-100 p-10 shadow-md">
             <div>
                 <input 
